@@ -1,4 +1,4 @@
-### INSTALL ###
+### INSTALL (linux) ###
 
 abstract:
 this script will automate logins to scn in the background on a scheduled basis, on a debian-based system
@@ -9,15 +9,15 @@ this script will automate logins to scn in the background on a scheduled basis, 
 
         gh repo clone 777paranoia/login
    
-or
-
+   or
+   
         wget https://github.com/777paranoia/login/archive/refs/heads/main.zip
 
-2. change into (extracted) directory; assuming it's in your home directory  
+3. change into (extracted) directory; assuming it's in your home directory  
 
          cd ~/login
 
-3. add your login username and pw to 'com.showcrewnetwork.login.service' where you see this:
+4. add your login username and pw to 'com.showcrewnetwork.login.service' where you see this:
 
        Environment=USERNAME=your_username
        Environment=PASSWORD=your_password
@@ -38,9 +38,17 @@ or
 
          systemctl list-timers --all | grep com.showcrewnetwork.login.timer
 
-9. thank alec for having giant brain 
+9. thank alec for having giant brain
 
-### UNINSTALL ###
+### INSTALL (mac) ###
+
+coming soon...
+
+### INSTALL (windows) ###
+
+hell no
+
+### UNINSTALL (linux) ###
 
 to uninstall/stop the service, run the following in shell:
 
