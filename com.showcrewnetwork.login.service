@@ -1,0 +1,11 @@
+[Unit]
+Description=Automated login script for showcrewnetwork.com
+
+[Service]
+WorkingDirectory=/home/unix666/login_script_package
+ExecStart=/bin/bash -c 'source /home/unix666/login_script_package/venv/bin/activate && /home/unix666/login_script_package/venv/bin/python /home/unix666/login_script_package/login_script.py'
+Environment=USERNAME=
+Environment=PASSWORD=
+
+[Install]
+WantedBy=multi-user.target
