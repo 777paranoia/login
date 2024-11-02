@@ -2,6 +2,11 @@
 
 sudo apt update
 sudo apt install -y python3 python3-venv python3-pip chromium-driver
+
+if ! command -v pip &> /dev/null; then
+    sudo apt install -y python3-pip
+fi
+
 mkdir -p ~/.login_log
 python3 -m venv ~/venv
 source ~/venv/bin/activate
