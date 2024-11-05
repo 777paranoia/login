@@ -3,9 +3,8 @@ Description=Automated login script for showcrewnetwork.com
 
 [Service]
 WorkingDirectory=~/login-main
-ExecStart=/bin/bash -c 'source ~/login-main/venv/bin/activate && ~/login-main/venv/bin/python ~/login-main/login_script.py'
-Environment=USERNAME=
-Environment=PASSWORD=
+ExecStart=/bin/bash -c 'source ~/login-main/venv/bin/activate && ~/login-main/venv/bin/python ~/login-main/login.py'
+EnvironmentFile=~/login-main/credentials.txt
 
 [Install]
 WantedBy=multi-user.target
