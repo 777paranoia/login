@@ -10,6 +10,15 @@ log_path = os.path.expanduser('~/.login_log/login_script.log')
 os.makedirs(os.path.dirname(log_path), exist_ok=True)
 logging.basicConfig(filename=log_path, level=logging.INFO)
 
+def load_credentials():
+    credentials_path = os.path.expanduser('~/login-main/credentials.txt')
+    credentials = {}
+    with open(credentials_path, 'r') as f:
+        for line in f:
+            key, value = line.strip().split('=')
+            credentials[key] = value
+    return credentials
+
 def login():
     logging.info(f'Script started at {datetime.now()}')
 
@@ -24,20 +33,17 @@ def login():
         driver.get('http://www.showcrewnetwork.com')
         logging.info('Opened login page')
 
-        # Retrieve username and password from environment variables
-        username = os.getenv('USERNAME')
-        password = os.getenv('PASSWORD')
+        credentials = load_credentials()
+        username = credentials.get("username")
+        password = credentials.get("password")
 
         if not username or not password:
-            raise Exception("Username or password not set in environment variables.")
+            raise Exception("Username or password not found in credentials.txt")
 
-        # Input credentials
         driver.find_element(By.ID, 'modlgn-username').send_keys(username)
         driver.find_element(By.ID, 'modlgn-passwd').send_keys(password)
-
         logging.info('Entered username and password')
 
-        # Find and click the login button
         login_button = driver.find_element(By.CLASS_NAME, 'login-button')
         login_button.click()
 
