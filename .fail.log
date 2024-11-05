@@ -1,0 +1,76 @@
+Job failed. See "journalctl -xe" for details.
+○ com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about e>
+     Loaded: loaded (/etc/systemd/system/com.showcrewnetwork.login.ti>
+     Active: inactive (dead)
+    Trigger: n/a
+   Triggers: ● com.showcrewnetwork.login.service
+
+Nov 05 12:48:41 666vm systemd[1]: com.showcrewnetwork.login.timer: Re>
+Nov 05 12:48:41 666vm systemd[1]: Failed to start com.showcrewnetwork>
+Nov 05 12:48:43 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:53:48 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:53:49 666vm systemd[1]: com.showcrewnetwork.login.timer: Re>
+Nov 05 12:53:49 666vm systemd[1]: Failed to start com.showcrewnetwork>
+...skipping...
+○ com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about e>
+     Loaded: loaded (/etc/systemd/system/com.showcrewnetwork.login.ti>
+     Active: inactive (dead)
+    Trigger: n/a
+   Triggers: ● com.showcrewnetwork.login.service
+
+Nov 05 12:48:41 666vm systemd[1]: com.showcrewnetwork.login.timer: Re>
+Nov 05 12:48:41 666vm systemd[1]: Failed to start com.showcrewnetwork>
+Nov 05 12:48:43 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:49:41 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:53:48 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:53:49 666vm systemd[1]: com.showcrewnetwork.login.timer: Re>
+Nov 05 12:53:49 666vm systemd[1]: Failed to start com.showcrewnetwork>
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-15/15 (END)
+[1]+  Stopped                 ./setup.sh
+unix666vm@666vm:~/login-main$ ./setup.sh > setuplog.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Job failed. See "journalctl -xe" for details.
+unix666vm@666vm:~/login-main$ journalctl -xe
+Nov 05 12:55:48 666vm sudo[8355]: pam_unix(sudo:session): session ope>
+Nov 05 12:55:48 666vm systemd[1]: Reloading requested from client PID>
+Nov 05 12:55:48 666vm systemd[1]: Reloading...
+Nov 05 12:55:48 666vm systemd[1]: Configuration file /run/systemd/sys>
+Nov 05 12:55:48 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:55:48 666vm systemd[1]: /etc/systemd/system/com.showcrewnet>
+Nov 05 12:55:48 666vm systemd[1]: com.showcrewnetwork.login.service: >
+Nov 05 12:55:49 666vm systemd[1]: Reloading finished in 257 ms.
+Nov 05 12:55:49 666vm sudo[8355]: pam_unix(sudo:session): session clo>
+Nov 05 12:55:49 666vm sudo[8429]: unix666vm : TTY=pts/0 ; PWD=/home/u>
+Nov 05 12:55:49 666vm sudo[8429]: pam_unix(sudo:session): session ope>
+Nov 05 12:55:49 666vm systemd[1]: com.showcrewnetwork.login.timer: Re>
+Nov 05 12:55:49 666vm systemd[1]: Failed to start com.showcrewnetwork>
+░░ Subject: A start job for unit com.showcrewnetwork.login.timer has >
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit com.showcrewnetwork.login.timer has finished >
+░░ 
+░░ The job identifier is 2570 and the job result is failed.
+Nov 05 12:55:49 666vm sudo[8429]: pam_unix(sudo:session): session clo>
+Nov 05 12:55:49 666vm sudo[8433]: unix666vm : TTY=pts/0 ; PWD=/home/u>
+Nov 05 12:55:49 666vm sudo[8433]: pam_unix(sudo:session): session ope>
+Nov 05 12:55:49 666vm sudo[8433]: pam_unix(sudo:session): session clo>
+
