@@ -1,10 +1,8 @@
 [Unit]
 Description=Run ShowCrewNetwork login about every 30min
-
-[Timer]
+ [Timer]
 OnCalendar=*:00,30
 Persistent=trueRandomizedDelaySec=600
 Unit=com.showcrewnetwork.login.service
-
-[Install]
+ [Install]
 WantedBy=timers.target
