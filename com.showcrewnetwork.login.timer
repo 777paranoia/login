@@ -2,7 +2,7 @@
 Description=Run ShowCrewNetwork login about every 30 minutes
 
 [Timer]
-OnCalendar=*:00,30
+OnCalendar=*:0/30
 Persistent=true
 RandomizedDelaySec=600
 Unit=com.showcrewnetwork.login.service
