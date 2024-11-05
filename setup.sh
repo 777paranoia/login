@@ -21,6 +21,7 @@ sudo cp ./com.showcrewnetwork.login.service /etc/systemd/system/
 sudo cp ./com.showcrewnetwork.login.timer /etc/systemd/system/
 
 sudo systemctl daemon-reload
+sudo systemctl enable com.showcrewnetwork.login.service
 sudo systemctl enable com.showcrewnetwork.login.timer
 sudo systemctl start com.showcrewnetwork.login.timer
 sudo systemctl status com.showcrewnetwork.login.timer
