@@ -5,30 +5,23 @@ this script will automate logins to scn in the background on a scheduled basis, 
 
 ####
 
-1. change into this directory after extraction (assuming you've done so in your home folder) 
+1. change into this directory after extraction (assuming you've done so in your home folder) (do so in your home folder so this all runs smooth) 
 
-   cd ~/login
+       cd ~/login-main
 
-2. add your login username and pw to 'com.showcrewnetwork.login.service' where you see this:
-
-   Environment=USERNAME=your_username
-   Environment=PASSWORD=your_password
-
-   (replace your_username and your_password with your credentials)
-
-3. save and close com.showcrewnetwork.login.service 
+2. open "credentials.txt" and insert your login info as told in the comment. save and close.
 
 4. run setup installation script. make executable if necessary. this will begin the background service as well. enter password as prompted
 
-   chmod +x ./setup.sh
-   ./setup.sh
+       chmod +x ./setup.sh
+       ./setup.sh
 
 5. verify script is running by viewing log within newly created folder "~/.login_log". it should create a screenshot verifying each successful login, and update a .log file detailing the login process
    * note that this new directory will be hidden (~/.*) so remember to show hidden files in your file broweser to make it visible
 
 6. verify timer is working. should currently be set to begin 5min after booting system and then repeatedly every hour
 
-   systemctl list-timers --all | grep com.showcrewnetwork.login.timer
+       systemctl list-timers --all | grep com.showcrewnetwork.login.timer
 
 7. thank alec for having giant brain 
 
@@ -44,5 +37,5 @@ to uninstall/stop the service, run the following in shell:
    sudo rm -f /etc/systemd/system/com.showcrewnetwork.login.timer
    sudo systemctl daemon-reload
    sudo systemctl reset-failed
-   rm -rf venv
    rm -rf ~/.login_log
+   rm -r ~/login-main
