@@ -1,0 +1,44 @@
+Hit:1 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+98 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3 is already the newest version (3.12.3-0ubuntu2).
+python3-venv is already the newest version (3.12.3-0ubuntu2).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.1).
+chromium-chromedriver is already the newest version (2:1snap1-0ubuntu2).
+0 upgraded, 0 newly installed, 0 to remove and 98 not upgraded.
+Requirement already satisfied: selenium in ./venv/lib/python3.12/site-packages (from -r ./requirements.txt (line 1)) (4.26.1)
+Requirement already satisfied: urllib3<3,>=1.26 in ./venv/lib/python3.12/site-packages (from urllib3[socks]<3,>=1.26->selenium->-r ./requirements.txt (line 1)) (2.2.3)
+Requirement already satisfied: trio~=0.17 in ./venv/lib/python3.12/site-packages (from selenium->-r ./requirements.txt (line 1)) (0.27.0)
+Requirement already satisfied: trio-websocket~=0.9 in ./venv/lib/python3.12/site-packages (from selenium->-r ./requirements.txt (line 1)) (0.11.1)
+Requirement already satisfied: certifi>=2021.10.8 in ./venv/lib/python3.12/site-packages (from selenium->-r ./requirements.txt (line 1)) (2024.8.30)
+Requirement already satisfied: typing_extensions~=4.9 in ./venv/lib/python3.12/site-packages (from selenium->-r ./requirements.txt (line 1)) (4.12.2)
+Requirement already satisfied: websocket-client~=1.8 in ./venv/lib/python3.12/site-packages (from selenium->-r ./requirements.txt (line 1)) (1.8.0)
+Requirement already satisfied: attrs>=23.2.0 in ./venv/lib/python3.12/site-packages (from trio~=0.17->selenium->-r ./requirements.txt (line 1)) (24.2.0)
+Requirement already satisfied: sortedcontainers in ./venv/lib/python3.12/site-packages (from trio~=0.17->selenium->-r ./requirements.txt (line 1)) (2.4.0)
+Requirement already satisfied: idna in ./venv/lib/python3.12/site-packages (from trio~=0.17->selenium->-r ./requirements.txt (line 1)) (3.10)
+Requirement already satisfied: outcome in ./venv/lib/python3.12/site-packages (from trio~=0.17->selenium->-r ./requirements.txt (line 1)) (1.3.0.post0)
+Requirement already satisfied: sniffio>=1.3.0 in ./venv/lib/python3.12/site-packages (from trio~=0.17->selenium->-r ./requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: wsproto>=0.14 in ./venv/lib/python3.12/site-packages (from trio-websocket~=0.9->selenium->-r ./requirements.txt (line 1)) (1.2.0)
+Requirement already satisfied: pysocks!=1.5.7,<2.0,>=1.5.6 in ./venv/lib/python3.12/site-packages (from urllib3[socks]<3,>=1.26->selenium->-r ./requirements.txt (line 1)) (1.7.1)
+Requirement already satisfied: h11<1,>=0.9.0 in ./venv/lib/python3.12/site-packages (from wsproto>=0.14->trio-websocket~=0.9->selenium->-r ./requirements.txt (line 1)) (0.14.0)
+○ com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about every 30 minutes
+     Loaded: loaded (/etc/systemd/system/com.showcrewnetwork.login.timer; enabled; preset: enabled)
+     Active: inactive (dead)
+    Trigger: n/a
+   Triggers: ● com.showcrewnetwork.login.service
+
+Nov 05 17:36:40 666vm systemd[1]: com.showcrewnetwork.login.timer: Refusing to start, unit com.showcrewnetwork.login.service to trigger not loaded.
+Nov 05 17:36:40 666vm systemd[1]: Failed to start com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about every 30 minutes.
+Nov 05 17:41:41 666vm systemd[1]: com.showcrewnetwork.login.timer: Refusing to start, unit com.showcrewnetwork.login.service to trigger not loaded.
+Nov 05 17:41:41 666vm systemd[1]: Failed to start com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about every 30 minutes.
+Nov 05 17:43:00 666vm systemd[1]: com.showcrewnetwork.login.timer: Refusing to start, unit com.showcrewnetwork.login.service to trigger not loaded.
+Nov 05 17:43:00 666vm systemd[1]: Failed to start com.showcrewnetwork.login.timer - Run ShowCrewNetwork login about every 30 minutes.
