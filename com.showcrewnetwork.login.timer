@@ -1,9 +1,10 @@
 [Unit]
-Description=Run ShowCrewNetwork login script every hour
+Description=Run ShowCrewNetwork login about every 30min
 
 [Timer]
-OnBootSec=5min
-OnUnitActiveSec=1h
+OnCalendar=*:00,30
+Persistent=trueRandomizedDelaySec=600
+Unit=com.showcrewnetwork.login.service
 
 [Install]
 WantedBy=timers.target
