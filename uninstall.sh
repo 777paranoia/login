@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo systemctl stop com.showcrewnetwork.login.timer
 sudo systemctl disable com.showcrewnetwork.login.timer
 sudo systemctl stop com.showcrewnetwork.login.service
