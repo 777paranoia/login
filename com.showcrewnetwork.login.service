@@ -1,9 +1,0 @@
-[Unit]
-Description=Run ShowCrewNetwork login script
-After=network-online.target
-
-[Service]
-Type=oneshot
-WorkingDirectory=%h/login-main
-ExecStart=%h/login-main/login.py
-EnvironmentFile=%h/login-main/credentials.txt
