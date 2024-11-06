@@ -1,10 +1,9 @@
 [Unit]
-Description=Automated login script for showcrewnetwork.com
+Description=Automated login script for ShowCrewNetwork
 
 [Service]
-WorkingDirectory=~/login-main
-ExecStart=/bin/bash -c 'source ~/login-main/venv/bin/activate && ~/login-main/venv/bin/python ~/login-main/login.py'
-EnvironmentFile=~/login-main/credentials.txt
+WorkingDirectory=%h/login-main
+ExecStart=/bin/bash -c 'source %h/login-main/venv/bin/activate && %h/login-main/venv/bin/python %h/login-main/login.py'
 
 [Install]
 WantedBy=multi-user.target
