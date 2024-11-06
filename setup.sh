@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/login-main || exit 1
+
 sudo apt update
 sudo apt install -y python3 python3-venv python3-pip chromium-chromedriver || sudo apt install -y chromium-driver
 
@@ -10,13 +12,15 @@ fi
 mkdir -p ~/.login_log
 touch ~/.login_log/login_script.log
 
-cd ~/login-main
-
 sudo cp ./com.showcrewnetwork.login.service /etc/systemd/system/
 sudo cp ./com.showcrewnetwork.login.timer /etc/systemd/system/
 
-python3 -m venv ./venv
+if [ ! -d "./venv" ]; then
+    python3 -m venv ./venv
+fi
+
 source ./venv/bin/activate
+pip install --upgrade pip
 pip install -r ./requirements.txt
 
 sudo systemctl daemon-reload
